@@ -17,4 +17,5 @@
 
 ActiveSupport::Inflector.inflections(:en) do |inflect|
   inflect.irregular 'autor', 'autores'
+  inflect.acronym 'API'
 end
