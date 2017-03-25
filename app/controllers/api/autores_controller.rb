@@ -2,19 +2,19 @@ module API
   class AutoresController < ApplicationController
     before_action :set_autor, only: [:show, :update, :destroy]
 
-    # GET /autores
+    # GET /api/autores
     def index
       @autores = Autor.all
 
       render json: @autores
     end
 
-    # GET /autores/1
+    # GET /api/autores/1
     def show
       render json: @autor
     end
 
-    # POST /autores
+    # POST /api/autores
     def create
       @autor = Autor.new(autor_params)
 
@@ -25,7 +25,7 @@ module API
       end
     end
 
-    # PATCH/PUT /autores/1
+    # PATCH/PUT /api/autores/1
     def update
       if @autor.update(autor_params)
         render json: @autor
@@ -34,7 +34,7 @@ module API
       end
     end
 
-    # DELETE /autores/1
+    # DELETE /api/autores/1
     def destroy
       @autor.destroy
     end
