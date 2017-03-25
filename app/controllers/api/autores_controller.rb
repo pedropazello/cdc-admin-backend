@@ -47,7 +47,7 @@ module API
 
       # Only allow a trusted parameter "white list" through.
       def autor_params
-        params.require(:autor).permit(:nome, :email, :password_digest)
+        params.require(:autor).permit(:nome, :email, :password)
       end
   end
 end
